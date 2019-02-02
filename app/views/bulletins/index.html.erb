@@ -1,0 +1,18 @@
+
+<p id="notice"><%= notice %></p>
+<div class="submitnew"><%= link_to 'New Bulletin', new_shout_path %></div>
+<h1 class="contenttitle">Bulletins</h1>
+<table>
+  <tbody>
+    <% @bulletins.each do |bulletin| %>
+      <tr>
+        <td><%= bulletin.title %></td>
+        <td><%= link_to 'Show', bulletin %></td>
+        <td><%= link_to 'Edit', edit_bulletin_path(bulletin) %></td>
+        <td><%= link_to 'Destroy', bulletin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
